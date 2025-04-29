@@ -5,9 +5,11 @@ export const CartContext = createContext();
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_To_CART":
-      return [...state, action.product];
+      return [...state, action.payload];
     case "REMOVE_FROM_CART":
-      return state.filter((item) => item.id !== action.id);
+      return state.filter((item) => item.id !== action.payload);
+    case "CHECKOUT":
+      return [];
     default:
       return state;
   }
