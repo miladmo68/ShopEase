@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 const CartModal = () => {
   const { cart, dispatch } = useContext(CartContext);
+  if (cart.length === 0) {
+    return (
+      <p className="p-4 flex flex-col items-center">Your cart is empty.</p>
+    );
+  }
   return (
     <div className="p-4 flex justify-between ">
       <div className="flex-col  ">
