@@ -9,6 +9,9 @@ const CartModal = () => {
       <p className="p-4 flex flex-col items-center">Your cart is empty.</p>
     );
   }
+
+  const totalPrice = cart.reduce((sum, product) => sum + product.price, 0);
+
   return (
     <div className="p-4 flex justify-between ">
       <div className="flex-col  ">
@@ -33,7 +36,7 @@ const CartModal = () => {
       </div>
       <div className=" mb-4">
         <h1 className="text-2xl font-bold">Checkout</h1>
-        <p>Price:</p>
+        <p>Price: ${totalPrice.toFixed(2)}</p>
         <Link to="/checkout">
           <button
             onClick={() => dispatch({ type: "CHECKOUT" })}
