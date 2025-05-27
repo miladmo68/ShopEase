@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Brand */}
         <NavLink
-          to="/ShopEase"
+          to="/"
           className="text-3xl font-black text-white hover:text-yellow-200"
         >
           <span className="bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
